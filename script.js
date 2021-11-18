@@ -52,8 +52,11 @@ function resetGame() {
   computerScoreNumber = 0;
   playerScoreNumber = 0;
   displayScore();
-  // reset text
+  // reset resultText
   resultText.textContent = '';
+  // remove choice text
+  playerChoiceEl.textContent = '';
+  computerChoiceEl.textContent = '';
 }
 
 // Passing player selection value and styling icons
@@ -165,3 +168,7 @@ function select(playerChoice) {
 
 // Event listeners
 resetIconEl.addEventListener('click', resetGame);
+
+// On Load
+// On startup, set initial values
+resetGame();
